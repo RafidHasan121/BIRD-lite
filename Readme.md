@@ -108,21 +108,25 @@ V4           7.68%          2.38%        25.24%  ← Winner
 
 ## Deliverables
 
-- `benchmark_results.json`: Comprehensive robustness data (15 images × 4 algorithms × 7 angles)
-- `02_detected_lines.json`: Baseline line detection
-- `BIRD_lite_pipeline.ipynb`: Full implementation with all 4 algorithm versions
+- `BIRD_lite.ipynb`: Full implementation with all 4 algorithm versions, evaluation, and results
+- `readme.md`: Technical documentation and analysis
+- `requirements.txt`: Project dependencies (OpenCV, NumPy, Matplotlib)
 
 ---
 
-## AI & Tool Usage
+## Work Breakdown
 
-• **Research**: Paper "Building image reconstruction and dimensioning of the envelope from two-dimensional perspective drawings"—implemented paper pseudocode for V4
+**Paper & Research**: "Building image reconstruction and dimensioning of the envelope from two-dimensional perspective drawings"—pseudocode reference for V4 algorithm.
 
-• **Development**: GitHub Copilot for exploration/scaffolding; independent algorithm design, empirical testing, failure analysis
+**Algorithm Development**: Design of V1-V4 approaches; empirical testing across rotation angles; failure case analysis and root-cause diagnosis.
 
-• **Libraries**: OpenCV (Canny, HoughLines), NumPy (numerical), Matplotlib (visualization)
+**Data & Validation**: Collection of 10 synthetic + 5 real online building images; 105 comprehensive test cases (15 images × 7 angles × 4 algorithms); performance matrix and per-image deviation tracking.
 
-• **Evaluation**: Systematic rotation testing across 15 images with performance matrix and per-image deviation tracking
+**Tools Used**:
+- GitHub Copilot: exploration, code structure scaffolding, algorithm prototyping, failure analysis, and documentation
+- OpenCV: Canny edge detection, HoughLines/HoughLinesP
+- NumPy: numerical operations
+- Matplotlib: visualization
 
 ---
 
